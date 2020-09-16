@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hisoft.appinfosystem.dao.dict.DictMapper">
+    <select id="queryFlatForm" resultType="com.hisoft.appinfosystem.pojo.FlatFrom">
+        select * from data_dictionary where typeCode='APP_FLATFORM'
+    </select>
+    <select id="queryLevel" resultType="com.hisoft.appinfosystem.pojo.Level">
+        select *from app_category where parentId =#{id}
+    </select>
+</mapper>
